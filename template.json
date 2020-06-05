@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": ["character", "monster"],
     "templates": {
       "base": {
         "health": {
@@ -8,16 +8,17 @@
           "min": 0,
           "max": 10
         },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        }
+        "hitDice": 1,
+        "armorClass": 10,
+        "speed": 30,
+        "description": ""
       }
     },
     "character": {
       "templates": ["base"],
       "biography": "",
+      "class": "fighter",
+      "xp": 0,
       "attributes": {
         "level": {
           "value": 1
@@ -42,7 +43,79 @@
         "cha": {
           "value": 10
         }
-      }
+      },
+      "saves": {
+        "paralyzation": 20,
+        "petrification": 20,
+        "rodStaffWand": 20,
+        "breathWeapon": 20,
+        "spell": 20
+      },
+      "spells": {
+        "spell1": {
+          "known": [],
+          "prepared": [],
+          "maxSlots": [],
+          "currentSlots": []
+        },
+        "spell2": {
+          "known": [],
+          "prepared": [],
+          "maxSlots": [],
+          "currentSlots": []
+        },
+        "spell3": {
+          "known": [],
+          "prepared": [],
+          "maxSlots": [],
+          "currentSlots": []
+        },
+        "spell4": {
+          "known": [],
+          "prepared": [],
+          "maxSlots": [],
+          "currentSlots": []
+        },
+        "spell5": {
+          "known": [],
+          "prepared": [],
+          "maxSlots": [],
+          "currentSlots": []
+        },
+        "spell6": {
+          "known": [],
+          "prepared": [],
+          "maxSlots": [],
+          "currentSlots": []
+        },
+        "spell7": {
+          "known": [],
+          "prepared": [],
+          "maxSlots": [],
+          "currentSlots": []
+        },
+        "spell8": {
+          "known": [],
+          "prepared": [],
+          "maxSlots": [],
+          "currentSlots": []
+        },
+        "spell9": {
+          "known": [],
+          "prepared": [],
+          "maxSlots": [],
+          "currentSlots": []
+        }
+      },
+      "inventory": [],
+      "notes": ""
+    },
+    "monster": {
+      "templates": ["base"],
+      "numAttacks": 1,
+      "damage": ["1d6"],
+      "xp": 100,
+      "special": ""
     }
   },
   "Item": {
