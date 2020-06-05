@@ -20,14 +20,14 @@
                     <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
                   </div>
               </div>
-              <div class="resource flex-group-center">
+              <!-- <div class="resource flex-group-center">
                   <label for="data.power.value" class="resource-label">Power</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
                     <span> / </span>
                     <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
                   </div>
-              </div>
+              </div> -->
           </div>
           {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
@@ -37,15 +37,29 @@
               <div class="ability flexrow flex-group-center">
                 <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
                 <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                <!-- <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span> -->
               </div>
             {{/each}}
           </div>
         </div>
     </header>
 
+    {{!-- Saving Throws --}}
+    <section class="sheet-body">
+      <div>
+        <ol class="saves-list">
+          <li>Paralyzation, Poison, Death Magic: {{data.saves.paralyzation}}</li>
+          <li>Petrification, Polymorph: {{data.saves.petrification}}</li>
+          <li>Rod, Staff, Wand: {{data.saves.rodStaffWand}}</li>
+          <li>Breath Weapon: {{data.saves.breathWeapon}}</li>
+          <li>Spell: {{data.saves.spell}}</li>
+        </ol>
+      </div>
+    </section>
+
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="spells">Spells</a>
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="items">Items</a>
     </nav>
@@ -79,6 +93,17 @@
                 </li>
             {{/each}}
             </ol>
+        </div>
+        <div class="tab items" data-group="primary" data-tab="spells">
+          <ol class="items-list">
+            <li class="item flexrow item-header">
+              <div class="item-image"></div>
+              <div class="item-name">Spell</div>
+              <div class="item-controls">
+                <a class="item-control item-create" title="Create spell" data-type="item"><i class="fas fa-plus"></i> Add Spell</a>
+              </div>
+            </li>
+          </ol>
         </div>
 
     </section>
