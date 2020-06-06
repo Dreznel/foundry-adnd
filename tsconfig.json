@@ -1,0 +1,6 @@
+{
+	"compilerOptions": {
+		"types": ["foundry-pc-types"],
+		"target": "ES2020"
+	}
+}
