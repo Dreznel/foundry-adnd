@@ -45,11 +45,26 @@
         }
       },
       "saves": {
-        "paralyzation": 20,
-        "petrification": 20,
-        "rodStaffWand": 20,
-        "breathWeapon": 20,
-        "spell": 20
+        "paralyzation": {
+          "name": "Paralyzation/Poison/Death Magic",
+          "value": 19
+        },
+        "petrification": {
+          "name": "Petrification/Polymorph",
+          "value": 19
+        },
+        "rodStaffWand": {
+          "name": "Rod/Staff/Wand",
+          "value": 19
+        },
+        "breathWeapon": {
+          "name": "Breath Weapon",
+          "value": 19
+        },
+        "spell": {
+          "name": "Spell",
+          "value": 19
+        }
       },
       "spells": {
         "spell1": {
