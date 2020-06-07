@@ -17,6 +17,10 @@
   @import 'components/items';
 }
 
+input.small-text-input {
+  width: 50px;
+}
+
 .saving-throw{
   text-transform: none;
   color: blue;
