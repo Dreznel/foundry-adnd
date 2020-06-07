@@ -25,3 +25,12 @@ input.small-text-input {
   text-transform: none;
   color: blue;
 }
+
+.ability-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-content: center;
+  grid-gap: 5px;
+
+}

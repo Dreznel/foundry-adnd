@@ -13,7 +13,7 @@
 .grid,
 .grid-1col {
   display: grid;
-  grid-column: span 1/span 1;
+  grid-column: 1/span 1;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 10px;
   margin: 10px 0;
@@ -209,6 +209,14 @@ input.small-text-input {
 .saving-throw {
   text-transform: none;
   color: blue;
+}
+
+.ability-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-content: center;
+  grid-gap: 5px;
 }
 
 /*# sourceMappingURL=adnd.css.map */

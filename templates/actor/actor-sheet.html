@@ -30,10 +30,12 @@
       {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
         use both the "grid" and "grid-Ncol" class where "N" can be any number
         from 1 to 12 and will create that number of columns.  --}}
-        <div class="abilities">
+        <div class="abilities ability-grid">
           {{#each data.abilities as |ability key|}}
-            <div class="ability">
+            <div class="ability-score-name">
               <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
+            </div>
+            <div class="ability-score-value">
               <input type="text" class="small-text-input" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
               <!-- <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span> -->
             </div>
