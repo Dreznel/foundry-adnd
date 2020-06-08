@@ -206,17 +206,27 @@ input.small-text-input {
   width: 50px;
 }
 
-.saving-throw {
-  text-transform: none;
-  color: blue;
-}
-
-.ability-grid {
+.saving-throw-grid, .ability-grid, .armor-class-grid {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 200px 50px;
   justify-content: start;
   align-content: center;
   grid-gap: 5px;
+}
+
+.saving-throw-name {
+  text-transform: none;
+  color: blue;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.armor-class-grid {
+  grid-template-columns: 100px 50px;
+}
+
+.ability-grid {
+  grid-template-columns: 75px 50px auto;
 }
 
 /*# sourceMappingURL=adnd.css.map */

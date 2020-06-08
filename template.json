@@ -26,22 +26,28 @@
       },
       "abilities": {
         "str": {
-          "value": 10
+          "value": 10,
+          "notes": ""
         },
         "dex": {
-          "value": 10
+          "value": 10,
+          "notes": ""
         },
         "con": {
-          "value": 10
+          "value": 10,
+          "notes": ""
         },
         "int": {
-          "value": 10
+          "value": 10,
+          "notes": ""
         },
         "wis": {
-          "value": 10
+          "value": 10,
+          "notes": ""
         },
         "cha": {
-          "value": 10
+          "value": 10,
+          "notes": ""
         }
       },
       "saves": {

@@ -21,16 +21,32 @@ input.small-text-input {
   width: 50px;
 }
 
-.saving-throw{
-  text-transform: none;
-  color: blue;
-}
-
-.ability-grid {
+%simple-grid {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 200px 50px;
   justify-content: start;
   align-content: center;
   grid-gap: 5px;
+}
 
+.saving-throw-name{
+  text-transform: none;
+  color: blue;
+  font-weight: bold;
+  //width: 100px;
+  word-wrap: break-word;
+}
+
+.armor-class-grid{
+  @extend %simple-grid;
+  grid-template-columns: 100px 50px;
+}
+
+.ability-grid {
+  @extend %simple-grid;
+  grid-template-columns: 75px 50px auto
+}
+
+.saving-throw-grid {
+  @extend %simple-grid
 }

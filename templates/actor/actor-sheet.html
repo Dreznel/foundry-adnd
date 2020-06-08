@@ -30,6 +30,7 @@
       {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
         use both the "grid" and "grid-Ncol" class where "N" can be any number
         from 1 to 12 and will create that number of columns.  --}}
+        <h1>Ability Scores</h1>
         <div class="abilities ability-grid">
           {{#each data.abilities as |ability key|}}
             <div class="ability-score-name">
@@ -39,6 +40,11 @@
               <input type="text" class="small-text-input" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
               <!-- <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span> -->
             </div>
+            <div class="ability-score-notes">
+              <textarea rows="1" class="ability-score-notes" name="{{key}}-notes" data-dtype="String">
+                {{ability.notes}}
+              </textarea>
+            </div>
           {{/each}}
         </div>
     </section>
@@ -46,18 +52,23 @@
     {{!-- Saving Throws --}}
     <section class="sheet-body">
       <div class="grid grid-2col">
-        <div class="defenses-column flexrow flex-group-left">
-          <label for="armor-class-input">Armor Class</label>
-          <input type="text" id="armor-class-input" value="{{data.armorClass}}"/>
+        <div class="defense-section">
+          <h1>Defenses</h1>
+          <div class="armor-class-grid">
+            <label for="armor-class-input">Armor Class</label>
+            <input type="text" id="armor-class-input" value="{{data.armorClass}}"/>
+          </div>
         </div>
-        <div class="saving-throw-column flexrow flex-group-left">
-          <div class="">
+        <div class="saving-throw-section">
+          <h1>Saving Throws</h1>
+          <div class="saving-throw-grid">
             {{#each data.saves as |save key|}}
-            <div class = "saving-throw">
+              <div class=saving-throw-name>
                 <label for="data.saves.{{key}}.value" class="">{{save.name}}</label>
+              </div>
+              <div>
                 <input type="text" name="data.saves.{{key}}.value" value="{{save.value}}" data-dtype="Number"/>
-                <br/>
-            </div>
+              </div>
             {{/each}}
           </div>
         </div>
