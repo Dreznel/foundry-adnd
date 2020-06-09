@@ -18,6 +18,7 @@
       "templates": ["base"],
       "biography": "",
       "class": "fighter",
+      "race": "human",
       "xp": 0,
       "attributes": {
         "level": {

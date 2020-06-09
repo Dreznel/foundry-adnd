@@ -21,12 +21,25 @@ input.small-text-input {
   width: 50px;
 }
 
+input.medium-text-input {
+  width: 100px
+}
+
+input.long-text-input {
+  width: 400px;
+}
+
 %simple-grid {
   display: grid;
   grid-template-columns: 200px 50px;
   justify-content: start;
   align-content: center;
   grid-gap: 5px;
+}
+
+.simple-grid{
+  @extend %simple-grid;
+  grid-template-columns: 50px 100px;
 }
 
 .saving-throw-name{
@@ -44,7 +57,7 @@ input.small-text-input {
 
 .ability-grid {
   @extend %simple-grid;
-  grid-template-columns: 75px 50px auto
+  grid-template-columns: auto 50px 300px
 }
 
 .saving-throw-grid {

@@ -8,6 +8,15 @@
             {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
             use both the "grid" and "grid-Ncol" class where "N" can be any number
             from 1 to 12 and will create that number of columns.  --}}
+            <div class="simple-grid">
+                <label for="char-class" class="resource-label">Class</label>
+                <input type="text" class="medium-text-input" id="char-class" name="char-class" value="{{data.class}}"/>
+
+                <label for="char-race" class="resource-label">Race</label>
+                <input type="text" class="medium-text-input" id="char-race" name="char-class" value="{{data.race}}"/>
+                
+              </div>
+            </div>
             <div class="resources grid grid-2col">
               {{!-- "flex-group-center" is also defined in the _grid.scss file
               and it will add a small amount of padding, a border, and will
@@ -41,9 +50,7 @@
               <!-- <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span> -->
             </div>
             <div class="ability-score-notes">
-              <textarea rows="1" class="ability-score-notes" name="{{key}}-notes" data-dtype="String">
-                {{ability.notes}}
-              </textarea>
+              <input type="text" class="long-text-input" name="data.abilities.{{key}}.notes" value="{{ability.notes}}" data-dtype="String"/>
             </div>
           {{/each}}
         </div>
